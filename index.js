@@ -111,3 +111,14 @@ return array;
 let array = [1,2,3,4,5,6,7];
 let k = 2
 console.log(leftRotate(array,k));
+
+
+
+// given tow strings a and b, determine if they are isomorphic (corresponding or similar in form and relations.//
+// having the same crystalline form.)
+
+// Input: "abc" "def"
+// Ouput: true
+
+// input: "aa"
+// output: false
