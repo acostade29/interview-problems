@@ -60,4 +60,54 @@ else
 //Speudocode
 
 
-//
+// use a split the input at all of the spaces to make an array of strings instead one big string 
+// go backwards throught the array and add each word backwards to a new string and reverse 
+
+//create a function called reverse string that takes in s as the string and then is going to store the reverse string 
+
+function reverseString(s)
+{
+  //is going to be an empty string since is the initial statement
+  var reversedString = "";
+
+  //input empty string 
+
+  var inputString =s.split(" ");
+
+  for (var i = inputString.length -1 ;
+  i >=0 ; i--)
+  {
+    reversedString += inputString[i] + " ";
+  } 
+
+console.log("reversed String")
+console.log(reversedString);
+}
+
+reverseString("hellooo im baby baba boo")
+
+
+//ROtae an array of n elements to the left by k steps. 
+//input: [1,2,3,4,5,6,7]
+//Ouput: [3,4,5,6,7,1,2]
+
+
+let leftRotate = (array,k) => {
+  if ( k< array.length) {
+    
+    array.unshift(...array.splice(k));
+
+  } else {
+    let i =0;
+    while (i< k) {
+      array.unshift(array.splice(-1));
+      i++;
+    }
+  }
+
+
+return array;
+}
+let array = [1,2,3,4,5,6,7];
+let k = 2
+console.log(leftRotate(array,k));
