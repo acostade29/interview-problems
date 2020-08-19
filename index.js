@@ -162,3 +162,24 @@ return true;
 console.log(areIsomorphic("abc", "def"))
 
 console.log(areIsomorphic("aa" , "ab"))
+
+
+
+
+
+
+// set Matrix to cero 
+// Given a 2d matrix, if an element is 0, set its entire row and colum to 0. Do it in a place 
+
+//INput
+// [[1,1,0,1]],
+// [[1,1,1,0]]
+// [1,1,0,1]
+
+
+// Output:
+// [[0,0,0,0],
+// [0,0,0,0]
+// [0,0,0,0]];
+
+s
