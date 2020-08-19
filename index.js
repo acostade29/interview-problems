@@ -122,3 +122,43 @@ console.log(leftRotate(array,k));
 
 // input: "aa"
 // output: false
+
+
+// 1 be sure the strings have the same lenght as part of condition to be isomorphic
+
+//use amap  to be able to locate the order of the string 
+
+//use a for loop and if 
+
+//check with both caracter are equal to do the comparation 
+
+let areIsomorphic = (string1, string2) => {
+  var hashMap = {} ;
+
+  if (string1.length !== string2.length) 
+ { 
+   return false; 
+ }
+
+  for( var index = 0; index < string1.length; index++)
+{
+var character1 = string1[index];
+var character2 = string2[index];
+}
+
+if (!hashMap[character1])
+{
+  hashMap[character1] = character2;
+}
+else if (hashMap[character1] !== character2 )
+{
+  return false;
+}
+
+return true; 
+}
+
+
+console.log(areIsomorphic("abc", "def"))
+
+console.log(areIsomorphic("aa" , "ab"))
