@@ -182,4 +182,44 @@ console.log(areIsomorphic("aa" , "ab"))
 // [0,0,0,0]
 // [0,0,0,0]];
 
-s
+function setZeros (matrix) {
+ 
+ for (var row = 0; row < matrix.length; row++) {
+     for (var column = 0; column < matrix[0].length; column++)
+     {
+
+       if (matrix[row][column] === 0 && 1/matrix[row][column] === Infinity)
+       {
+         for (var x = 0; x < matrix.length; x++)
+         {
+           matrix[x][column] = matrix[x][column] && -0;
+         }
+         for (var y = 0; y < matrix[0].length; y++)
+         {
+           matrix[row][y] = matrix[row][y] && -0;
+         }
+       }
+     }
+  }
+ }
+
+ function printMatrix (matrix)
+ {
+   for (var row = 0; row < matrix.length; row++)
+   {
+     var x = "";
+     for (var column = 0; column < matrix[0].length; column++)
+     {
+       x += matrix[row][column];
+     }
+     console.log(x);
+   }
+ }
+
+ var matrix = [[1, 1, 0, 1], [1, 1, 1, 0], [1, 1, 0, 1]];
+ setZeros(matrix);
+ printMatrix(matrix);
+
+ var matrix2 = [[1, 1, 1, 1], [1, 1, 1, 0], [1, 1, 1, 1]];
+ setZeros(matrix2);
+ printMatrix(matrix2);
